@@ -46,6 +46,12 @@ export default function Navigation() {
                 Availability
               </button>
               <button
+                onClick={() => scrollToSection("pricing")}
+                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Pricing
+              </button>
+              <button
                 onClick={() => scrollToSection("gallery")}
                 className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
               >
@@ -95,6 +101,12 @@ export default function Navigation() {
                 className="block text-gray-700 hover:text-sage-700 px-3 py-2 text-base font-medium transition-colors w-full text-left"
               >
                 Availability
+              </button>
+              <button
+                onClick={() => scrollToSection("pricing")}
+                className="block text-gray-700 hover:text-sage-700 px-3 py-2 text-base font-medium transition-colors w-full text-left"
+              >
+                Pricing
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}

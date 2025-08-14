@@ -100,10 +100,15 @@ export default function ContactSection() {
                       <Clock className="text-sage-600 h-6 w-6" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Appointments</h4>
-                      <p className="text-gray-600">
-                        Viewings, drop-offs and pick-ups<br />
-                        available by appointment only
+                      <h4 className="font-semibold text-gray-900 mb-1">Opening Hours</h4>
+                      <p className="text-gray-700 leading-relaxed">
+                        <strong>Monday - Saturday</strong><br />
+                        9:00 AM - 11:00 AM<br />
+                        4:00 PM - 6:00 PM<br />
+                        <strong>Sunday:</strong> Closed
+                      </p>
+                      <p className="text-gray-600 text-sm mt-2">
+                        Viewings, drop-offs and pick-ups by appointment
                       </p>
                     </div>
                   </div>
