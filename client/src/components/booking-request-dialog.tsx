@@ -185,22 +185,35 @@ export default function BookingRequestDialog({
               </ul>
             </div>
 
-            <div className="flex justify-end gap-3 pt-4">
+            <div className="flex justify-between pt-4">
               <Button
                 type="button"
                 variant="outline"
-                onClick={onClose}
+                onClick={() => {
+                  onClose();
+                }}
                 disabled={bookingMutation.isPending}
+                className="border-sage-600 text-sage-600 hover:bg-sage-50"
               >
-                Cancel
+                ← Back to Calendar
               </Button>
-              <Button
-                type="submit"
-                className="bg-sage-600 hover:bg-sage-700 text-white"
-                disabled={bookingMutation.isPending}
-              >
-                {bookingMutation.isPending ? "Submitting..." : "Submit Booking Request"}
-              </Button>
+              <div className="flex gap-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={onClose}
+                  disabled={bookingMutation.isPending}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-sage-600 hover:bg-sage-700 text-white"
+                  disabled={bookingMutation.isPending}
+                >
+                  {bookingMutation.isPending ? "Submitting..." : "Submit Booking Request"}
+                </Button>
+              </div>
             </div>
           </form>
         </Form>
