@@ -1,15 +1,21 @@
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { ChevronLeft, ChevronRight, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Availability } from "@shared/schema";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import type { BookingSlot } from "@shared/schema";
+import BookingRequestDialog from "./booking-request-dialog";
 
 export default function AvailabilitySection() {
   const [currentDate, setCurrentDate] = useState(new Date(2024, 11)); // December 2024
+  const [selectedDates, setSelectedDates] = useState<string[]>([]);
+  const [isBookingDialogOpen, setIsBookingDialogOpen] = useState(false);
+  const { toast } = useToast();
   
-  const { data: availability, isLoading } = useQuery<Availability[]>({
-    queryKey: ["/api/availability", currentDate.getFullYear(), currentDate.getMonth() + 1],
+  const { data: bookingSlots, isLoading } = useQuery<BookingSlot[]>({
+    queryKey: ["/api/booking-slots", currentDate.getFullYear(), currentDate.getMonth() + 1],
   });
 
   const monthNames = [
@@ -23,6 +29,16 @@ export default function AvailabilitySection() {
 
   const nextMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1));
+  };
+
+  const toggleDateSelection = (dateStr: string) => {
+    setSelectedDates(prev => {
+      if (prev.includes(dateStr)) {
+        return prev.filter(d => d !== dateStr);
+      } else {
+        return [...prev, dateStr].sort();
+      }
+    });
   };
 
   const getDaysInMonth = (date: Date) => {
@@ -43,13 +59,21 @@ export default function AvailabilitySection() {
     // Add all days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      const availabilityData = availability?.find(a => a.date === dateStr);
-      const isAvailable = availabilityData ? availabilityData.isAvailable : true;
+      
+      // Check if date has any available slots
+      const dateSlotsAvailable = bookingSlots?.filter(slot => 
+        slot.date === dateStr && slot.isAvailable
+      ).length || 0;
+      
+      const isAvailable = dateSlotsAvailable > 0;
+      const availabilityText = dateSlotsAvailable > 0 ? `${dateSlotsAvailable} slots` : 'Full';
       
       days.push({
         day,
         isAvailable,
-        dateStr
+        dateStr,
+        availabilityText,
+        slotsAvailable: dateSlotsAvailable
       });
     }
     
@@ -109,16 +133,20 @@ export default function AvailabilitySection() {
             ) : (
               <div className="grid grid-cols-7 gap-2">
                 {days.map((day, index) => (
-                  <div key={index} className="h-12 flex items-center justify-center">
+                  <div key={index} className="h-16 flex items-center justify-center">
                     {day && (
                       <div
-                        className={`w-full h-full rounded-lg border flex items-center justify-center cursor-pointer transition-colors ${
-                          day.isAvailable
+                        onClick={() => day.isAvailable && toggleDateSelection(day.dateStr)}
+                        className={`w-full h-full rounded-lg border flex flex-col items-center justify-center cursor-pointer transition-colors text-sm ${
+                          selectedDates.includes(day.dateStr)
+                            ? "bg-sage-200 border-sage-400 ring-2 ring-sage-500"
+                            : day.isAvailable
                             ? "bg-green-100 hover:bg-green-200 border-green-300"
                             : "bg-red-100 border-red-300 text-gray-500 cursor-not-allowed"
                         }`}
                       >
-                        {day.day}
+                        <span className="font-medium">{day.day}</span>
+                        <span className="text-xs">{day.availabilityText}</span>
                       </div>
                     )}
                   </div>
@@ -135,7 +163,42 @@ export default function AvailabilitySection() {
                 <div className="w-4 h-4 bg-red-100 border border-red-300 rounded"></div>
                 <span className="text-sm text-gray-600">Fully Booked</span>
               </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-sage-200 border border-sage-400 rounded"></div>
+                <span className="text-sm text-gray-600">Selected</span>
+              </div>
             </div>
+
+            {selectedDates.length > 0 && (
+              <div className="mt-6 p-4 bg-sage-50 rounded-lg">
+                <div className="text-center mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Selected Dates</h4>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {selectedDates.map(date => (
+                      <span key={date} className="px-3 py-1 bg-sage-200 text-sage-800 rounded-full text-sm">
+                        {new Date(date).toLocaleDateString()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <Button
+                    onClick={() => setIsBookingDialogOpen(true)}
+                    className="bg-sage-600 hover:bg-sage-700 text-white px-6 py-2 mr-2"
+                  >
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Request Booking
+                  </Button>
+                  <Button
+                    onClick={() => setSelectedDates([])}
+                    variant="outline"
+                    className="border-sage-600 text-sage-600 hover:bg-sage-50 px-6 py-2"
+                  >
+                    Clear Selection
+                  </Button>
+                </div>
+              </div>
+            )}
             
             <div className="text-center mt-8">
               <Button
@@ -152,6 +215,15 @@ export default function AvailabilitySection() {
           </CardContent>
         </Card>
       </div>
+      
+      <BookingRequestDialog
+        isOpen={isBookingDialogOpen}
+        onClose={() => {
+          setIsBookingDialogOpen(false);
+          setSelectedDates([]);
+        }}
+        selectedDates={selectedDates}
+      />
     </section>
   );
 }

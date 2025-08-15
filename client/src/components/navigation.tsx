@@ -63,6 +63,12 @@ export default function Navigation() {
               >
                 Contact
               </button>
+              <a
+                href="/admin"
+                className="text-gray-500 hover:text-sage-700 px-3 py-2 text-xs font-medium transition-colors"
+              >
+                Admin
+              </a>
             </div>
           </div>
           
