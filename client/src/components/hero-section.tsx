@@ -42,7 +42,7 @@ export default function HeroSection() {
           >
             <a href="tel:01923264503">
               <Phone className="mr-2 h-5 w-5" />
-              Call Caroline: 01923 264503
+              Call: 01923 264503
             </a>
           </Button>
         </div>

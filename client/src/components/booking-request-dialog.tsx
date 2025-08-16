@@ -178,7 +178,7 @@ export default function BookingRequestDialog({
             <div className="bg-cream-50 p-4 rounded-lg">
               <h4 className="font-semibold text-gray-900 mb-2">What happens next?</h4>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Caroline will review your booking request within 24 hours</li>
+                <li>• We will review your booking request within 24 hours</li>
                 <li>• You'll receive confirmation via email or phone</li>
                 <li>• A cattery viewing can be arranged before your booking</li>
                 <li>• Payment is due on drop-off day</li>

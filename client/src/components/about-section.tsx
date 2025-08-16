@@ -14,20 +14,15 @@ export default function AboutSection() {
               </p>
               <p className="mb-6">
                 Cattery viewings, drop-offs and pick-ups can be arranged by appointment. 
-                Please ring Caroline to discuss your requirements.
+                Please ring us to discuss your requirements.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img 
-              src="https://pixabay.com/get/g744a4cb747831997ea57fefcaf13d40439b29a4586575966ec9fe9446cdc99ebf9b868f449d640eec2ff3d33bd79d3b08200350f64d2d84e0d8a64aee8539960_1280.jpg" 
-              alt="Family business owners" 
-              className="rounded-lg shadow-lg w-full h-48 object-cover" 
-            />
+          <div className="flex justify-center">
             <img 
               src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
               alt="Tranquil farm gardens" 
-              className="rounded-lg shadow-lg w-full h-48 object-cover mt-4" 
+              className="rounded-lg shadow-lg w-full max-w-md h-64 object-cover" 
             />
           </div>
         </div>

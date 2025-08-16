@@ -79,7 +79,7 @@ export default function ContactSection() {
                       <a href="tel:01923264503" className="text-sage-600 hover:text-sage-700 text-lg font-medium">
                         01923 264503
                       </a>
-                      <p className="text-gray-600 text-sm mt-1">Call Caroline to discuss your requirements</p>
+                      <p className="text-gray-600 text-sm mt-1">Call to discuss your requirements</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -227,7 +227,7 @@ export default function ContactSection() {
                   >
                     <a href="tel:01923264503">
                       <Phone className="mr-2 h-5 w-5" />
-                      Call Caroline: 01923 264503
+                      Call: 01923 264503
                     </a>
                   </Button>
                 </div>
