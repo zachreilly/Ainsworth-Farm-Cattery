@@ -9,24 +9,13 @@ export default function AboutSection() {
             </h2>
             <div className="prose prose-lg text-gray-700 leading-relaxed">
               <p className="mb-6">
-                We are a small family run business set in the tranquil gardens of Ainsworth Farm. 
-                Your cat's stay with us is our priority and we pride ourselves in caring for your cat 
-                as if it were our own.
+                Set in the tranquil gardens of Ainsworth Farm, your cat's stay with us is our priority 
+                and we pride ourselves in caring for your cat as if it were our own.
               </p>
               <p className="mb-6">
                 Cattery viewings, drop-offs and pick-ups can be arranged by appointment. 
                 Please ring Caroline to discuss your requirements.
               </p>
-            </div>
-            <div className="grid grid-cols-2 gap-6 mt-8">
-              <div className="text-center p-4">
-                <div className="text-3xl font-bold text-sage-600 mb-2">15+</div>
-                <div className="text-sm text-gray-600">Years of Experience</div>
-              </div>
-              <div className="text-center p-4">
-                <div className="text-3xl font-bold text-sage-600 mb-2">500+</div>
-                <div className="text-sm text-gray-600">Happy Cats Cared For</div>
-              </div>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
