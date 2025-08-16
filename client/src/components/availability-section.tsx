@@ -90,7 +90,7 @@ export default function AvailabilitySection() {
             Check Availability
           </h2>
           <p className="text-xl text-gray-600">
-            View our current availability and plan your cat's stay. Call Caroline to make a reservation.
+            View our current availability and plan your cat's stay. Call us to make a reservation.
           </p>
         </div>
         
