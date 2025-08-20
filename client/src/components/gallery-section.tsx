@@ -30,41 +30,17 @@ const facilityImages = [
   }
 ];
 
-const gardenImages = [
-  {
-    src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Lush garden with paths"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Peaceful garden pond"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Colorful flower garden"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Serene farm landscape"
-  }
-];
+import catPhoto1 from "@assets/PHOTO-2025-08-20-22-11-31_1755724709732.jpg";
+import catPhoto2 from "@assets/3b27bbc2-8c33-41de-b1c4-3be03a1c4f16_1755724721798.jpeg";
 
 const catImages = [
   {
-    src: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Content orange tabby cat"
+    src: catPhoto1,
+    alt: "Cats in their accommodation"
   },
   {
-    src: "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Peaceful gray cat napping"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Playful black and white cat"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1571566882372-1598d88abd90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Relaxed calico cat"
+    src: catPhoto2,
+    alt: "Happy cats at the cattery"
   }
 ];
 
@@ -110,28 +86,9 @@ export default function GallerySection() {
           </div>
         </div>
         
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-6">Garden Setting</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {gardenImages.map((image, index) => (
-              <div
-                key={index}
-                className="group cursor-pointer"
-                onClick={() => openLightbox(image)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="rounded-lg shadow-lg w-full h-48 object-cover group-hover:shadow-xl transition-shadow"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-        
         <div>
           <h3 className="text-2xl font-semibold text-gray-900 mb-6">Happy Guests</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {catImages.map((image, index) => (
               <div
                 key={index}
@@ -141,7 +98,7 @@ export default function GallerySection() {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="rounded-lg shadow-lg w-full h-48 object-cover group-hover:shadow-xl transition-shadow"
+                  className="rounded-lg shadow-lg w-full h-64 object-cover group-hover:shadow-xl transition-shadow"
                 />
               </div>
             ))}
