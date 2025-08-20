@@ -60,7 +60,7 @@ export default function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to book your cat's stay? Contact Caroline to discuss your requirements and arrange a viewing.
+            Ready to book your cat's stay? Contact us to discuss your requirements and arrange a viewing.
           </p>
         </div>
         
