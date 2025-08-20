@@ -6,6 +6,7 @@ import facility2 from "@assets/4663a8e6-4378-4ef9-9b41-53fb18a77770_175572365039
 import facility3 from "@assets/b54c6817-6649-40dc-a5aa-9b546afffa83_1755723650398.jpeg";
 import facility4 from "@assets/c2bf3de2-1071-43f3-a6a5-d4a7e4797748_1755723650399.jpeg";
 import facility5 from "@assets/ed369d28-0dfd-4a7b-9c3d-b9b063fef678_1755723650400.jpeg";
+import facility6 from "@assets/love cats_1755730601503.jpeg";
 
 const facilityImages = [
   {
@@ -27,6 +28,10 @@ const facilityImages = [
   {
     src: facility5,
     alt: "Cattery space"
+  },
+  {
+    src: facility6,
+    alt: "Cats enjoying their stay"
   }
 ];
 
