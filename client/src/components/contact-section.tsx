@@ -145,11 +145,44 @@ export default function ContactSection() {
             <Card className="bg-gray-50">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send Us a Message</h3>
-                <div className="text-center">
+                <div className="text-center mb-8">
                   <p className="text-xl text-gray-700 mb-2">Email:</p>
                   <a href="mailto:Cats@ainsworthfarm.co.uk" className="text-xl font-semibold text-sage-600 hover:text-sage-700">
                     Cats@ainsworthfarm.co.uk
                   </a>
+                </div>
+                
+                <div className="bg-cream-50 p-6 rounded-lg">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4">Useful Information and Tips for Us to Give Your Cat the Best Experience</h4>
+                  <p className="text-gray-700 mb-4">
+                    Please include the following details when contacting us:
+                  </p>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-sage-600 mr-2">•</span>
+                      <span><strong>Phone number</strong> - for quick communication</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-sage-600 mr-2">•</span>
+                      <span><strong>Email address</strong> - for booking confirmations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-sage-600 mr-2">•</span>
+                      <span><strong>Name of owner</strong> - your full name</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-sage-600 mr-2">•</span>
+                      <span><strong>Name of cat</strong> - what we should call your cat</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-sage-600 mr-2">•</span>
+                      <span><strong>Preferences and requirements of diet</strong> - special foods, feeding times, treats</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-sage-600 mr-2">•</span>
+                      <span><strong>Any queries</strong> - questions about our facilities or services</span>
+                    </li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>
