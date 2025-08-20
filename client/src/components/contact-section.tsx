@@ -53,16 +53,30 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to book your cat's stay? Contact us to discuss your requirements and arrange a viewing.
-          </p>
+    <>
+      <section id="terms" className="py-20 bg-cream-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+              Terms and Conditions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Your furry friend must be fully vaccinated and be up to date with their annual boosters.
+            </p>
+          </div>
         </div>
+      </section>
+      
+      <section id="contact" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Ready to book your cat's stay? Contact us to discuss your requirements and arrange a viewing.
+            </p>
+          </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
@@ -187,5 +201,6 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import AboutSection from "@/components/about-section";
 import AvailabilitySection from "@/components/availability-section";
 import PricingSection from "@/components/pricing-section";
 import GallerySection from "@/components/gallery-section";
+import TermsSection from "@/components/terms-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
 {/* <AvailabilitySection /> */}
       <PricingSection />
       <AboutSection />
+      <TermsSection />
       <ContactSection />
       <Footer />
     </div>
