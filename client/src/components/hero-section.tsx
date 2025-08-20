@@ -26,14 +26,7 @@ export default function HeroSection() {
           Family-run cattery nestled in the tranquil gardens of Ainsworth Farm, 
           where your cat's comfort and wellbeing are our top priority.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            onClick={() => scrollToSection("availability")}
-            className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-4 text-lg font-semibold"
-            size="lg"
-          >
-            Check Availability
-          </Button>
+        <div className="flex justify-center">
           <Button
             asChild
             variant="outline"
