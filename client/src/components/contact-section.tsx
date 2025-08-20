@@ -145,91 +145,11 @@ export default function ContactSection() {
             <Card className="bg-gray-50">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send Us a Message</h3>
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Your Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Enter your name" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Phone Number</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your phone number" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input type="email" placeholder="your.email@example.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              rows={5}
-                              placeholder="Tell us about your cat's needs, preferred dates, or any special requirements..."
-                              className="resize-none"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <Button
-                      type="submit"
-                      className="w-full bg-sage-600 hover:bg-sage-700 text-white text-lg font-semibold"
-                      size="lg"
-                      disabled={contactMutation.isPending}
-                    >
-                      {contactMutation.isPending ? "Sending..." : "Send Message"}
-                    </Button>
-                  </form>
-                </Form>
-                
-                <div className="mt-6 text-center">
-                  <p className="text-gray-600 text-sm mb-4">Prefer to call? We'd love to hear from you!</p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-sage-600 text-sage-600 hover:bg-sage-50"
-                    size="lg"
-                  >
-                    <a href="tel:01923264503">
-                      <Phone className="mr-2 h-5 w-5" />
-                      Call: 01923 264503
-                    </a>
-                  </Button>
+                <div className="text-center">
+                  <p className="text-xl text-gray-700 mb-2">Email:</p>
+                  <a href="mailto:Cats@ainsworthfarm.co.uk" className="text-xl font-semibold text-sage-600 hover:text-sage-700">
+                    Cats@ainsworthfarm.co.uk
+                  </a>
                 </div>
               </CardContent>
             </Card>
