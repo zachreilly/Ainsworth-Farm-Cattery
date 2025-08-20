@@ -1,30 +1,32 @@
 import { useState } from "react";
 import ImageLightbox from "./image-lightbox";
 
+import facility1 from "@assets/54b7ae58-f356-4eda-8753-73909f0b616e_1755723650395.jpeg";
+import facility2 from "@assets/4663a8e6-4378-4ef9-9b41-53fb18a77770_1755723650397.jpeg";
+import facility3 from "@assets/b54c6817-6649-40dc-a5aa-9b546afffa83_1755723650398.jpeg";
+import facility4 from "@assets/c2bf3de2-1071-43f3-a6a5-d4a7e4797748_1755723650399.jpeg";
+import facility5 from "@assets/ed369d28-0dfd-4a7b-9c3d-b9b063fef678_1755723650400.jpeg";
+
 const facilityImages = [
   {
-    src: "https://images.unsplash.com/photo-1545249390-6bdfa286032f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Individual cat enclosure"
+    src: facility1,
+    alt: "Cattery facility"
   },
   {
-    src: "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Spacious cat room"
+    src: facility2,
+    alt: "Cattery interior"
   },
   {
-    src: "https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Outdoor cat play area"
+    src: facility3,
+    alt: "Cat accommodation"
   },
   {
-    src: "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Cat feeding area"
+    src: facility4,
+    alt: "Facility room"
   },
   {
-    src: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Cozy cat sleeping area"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    alt: "Multi-level cat tower"
+    src: facility5,
+    alt: "Cattery space"
   }
 ];
 
