@@ -48,7 +48,7 @@ export default function AboutSection() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Care</h3>
               <p className="text-gray-600">
-                Individual attention and care tailored to your cat's specific needs and personality.
+                Individual attention and care tailored to your cat. Standard food supplied, for fancy eaters or prescription food please bring with you with enough for their stay.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
