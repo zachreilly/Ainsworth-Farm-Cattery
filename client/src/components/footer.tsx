@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Ainsworth Farm Cattery. All rights reserved.</p>
-          <p className="text-xs mt-2">Made by wrwebsites.com</p>
+          <p className="text-xs mt-2">Made by <a href="https://wrwebsites.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">wrwebsites.com</a></p>
         </div>
       </div>
     </footer>
