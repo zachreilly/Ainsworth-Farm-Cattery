@@ -63,7 +63,7 @@ export default function GallerySection() {
             Our Facilities & Happy Guests
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Take a virtual tour of our cattery and see the comfortable spaces where your cat will stay.
+            See the relaxing environment where your cat will be staying.
           </p>
         </div>
         
