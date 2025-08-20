@@ -18,13 +18,7 @@ export default function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="flex justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Tranquil farm gardens" 
-              className="rounded-lg shadow-lg w-full max-w-md h-64 object-cover" 
-            />
-          </div>
+
         </div>
       </div>
       
