@@ -132,10 +132,7 @@ export default function ContactSection() {
                     <Check className="text-sage-600 h-5 w-5 mt-0.5 flex-shrink-0" />
                     <span>Flexible drop-off and pick-up times</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="text-sage-600 h-5 w-5 mt-0.5 flex-shrink-0" />
-                    <span>Daily care updates available</span>
-                  </li>
+
                 </ul>
               </CardContent>
             </Card>
