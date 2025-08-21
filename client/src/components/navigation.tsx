@@ -19,7 +19,7 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center flex-shrink-0">
-            <h1 className="text-lg lg:text-2xl xl:text-3xl font-serif font-bold text-sage-700 tracking-wide whitespace-nowrap">
+            <h1 className="text-xl lg:text-3xl xl:text-4xl font-serif font-bold text-sage-700 tracking-wide whitespace-nowrap">
               Ainsworth Farm Cattery
             </h1>
           </div>
