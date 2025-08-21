@@ -39,12 +39,7 @@ export default function Navigation() {
               >
                 About Us
               </button>
-              <button
-                onClick={() => scrollToSection("availability")}
-                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
-              >
-                Availability
-              </button>
+
               <button
                 onClick={() => scrollToSection("pricing")}
                 className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
