@@ -18,49 +18,47 @@ export default function Navigation() {
     <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-sage-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <h1 className="text-lg font-serif font-semibold text-sage-700 tracking-wide">
-                Ainsworth Farm Cattery
-              </h1>
-            </div>
+          <div className="flex items-center flex-shrink-0">
+            <h1 className="text-sm lg:text-lg font-serif font-semibold text-sage-700 tracking-wide whitespace-nowrap">
+              Ainsworth Farm Cattery
+            </h1>
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-10">
+          <div className="hidden lg:block">
+            <div className="flex items-baseline space-x-6">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-sage-700 hover:text-sage-900 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+                className="text-sage-700 hover:text-sage-900 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
-                About Us
+                About
               </button>
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
-                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Gallery
               </button>
               <button
                 onClick={() => scrollToSection("terms")}
-                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Terms
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Contact
               </button>
@@ -68,7 +66,7 @@ export default function Navigation() {
             </div>
           </div>
           
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -84,7 +82,7 @@ export default function Navigation() {
         </div>
         
         {isMobileMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <button
                 onClick={() => scrollToSection("home")}
