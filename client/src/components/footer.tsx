@@ -9,31 +9,31 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Ainsworth Farm Cattery</h3>
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <h3 className="text-2xl font-serif font-bold mb-6 text-sage-200">Ainsworth Farm Cattery</h3>
+            <p className="text-gray-300 leading-relaxed mb-8 text-lg">
               A family-run cattery providing exceptional care for your beloved cats in the tranquil 
-              gardens of Ainsworth Farm.
+              gardens of Ainsworth Farm in Kings Langley.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Facebook className="h-6 w-6" />
+            <div className="flex gap-6">
+              <a href="#" className="text-gray-400 hover:text-sage-300 transition-all duration-300 transform hover:scale-110">
+                <Facebook className="h-7 w-7" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                <Instagram className="h-6 w-6" />
+              <a href="#" className="text-gray-400 hover:text-sage-300 transition-all duration-300 transform hover:scale-110">
+                <Instagram className="h-7 w-7" />
               </a>
             </div>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xl font-semibold mb-6 text-sage-200">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
                 <button 
                   onClick={() => scrollToSection("home")} 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-sage-200 transition-colors duration-300 text-base"
                 >
                   Home
                 </button>
@@ -41,16 +41,15 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection("about")} 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-sage-200 transition-colors duration-300 text-base"
                 >
                   About Us
                 </button>
               </li>
-
               <li>
                 <button 
                   onClick={() => scrollToSection("pricing")} 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-sage-200 transition-colors duration-300 text-base"
                 >
                   Pricing
                 </button>
@@ -58,15 +57,23 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection("gallery")} 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-sage-200 transition-colors duration-300 text-base"
                 >
                   Gallery
                 </button>
               </li>
               <li>
                 <button 
+                  onClick={() => scrollToSection("terms")} 
+                  className="text-gray-300 hover:text-sage-200 transition-colors duration-300 text-base"
+                >
+                  Terms
+                </button>
+              </li>
+              <li>
+                <button 
                   onClick={() => scrollToSection("contact")} 
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-sage-200 transition-colors duration-300 text-base"
                 >
                   Contact
                 </button>

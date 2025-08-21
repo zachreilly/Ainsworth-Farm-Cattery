@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LoginModal from "./login-modal";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,56 +15,56 @@ export default function Navigation() {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-sage-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-serif font-bold text-sage-700">
+              <h1 className="text-lg font-serif font-semibold text-sage-700 tracking-wide">
                 Ainsworth Farm Cattery
               </h1>
             </div>
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-10">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-sage-700 hover:text-sage-900 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-sage-700 hover:text-sage-900 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 About Us
               </button>
-
               <button
                 onClick={() => scrollToSection("pricing")}
-                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Pricing
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
-                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Gallery
               </button>
               <button
+                onClick={() => scrollToSection("terms")}
+                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
+              >
+                Terms
+              </button>
+              <button
                 onClick={() => scrollToSection("contact")}
-                className="text-gray-700 hover:text-sage-700 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-700 hover:text-sage-700 px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-sage-50 rounded-md"
               >
                 Contact
               </button>
-              <a
-                href="/admin"
-                className="text-gray-500 hover:text-sage-700 px-3 py-2 text-xs font-medium transition-colors"
-              >
-                Admin
-              </a>
+              <LoginModal />
             </div>
           </div>
           
@@ -97,12 +98,7 @@ export default function Navigation() {
               >
                 About Us
               </button>
-              <button
-                onClick={() => scrollToSection("availability")}
-                className="block text-gray-700 hover:text-sage-700 px-3 py-2 text-base font-medium transition-colors w-full text-left"
-              >
-                Availability
-              </button>
+
               <button
                 onClick={() => scrollToSection("pricing")}
                 className="block text-gray-700 hover:text-sage-700 px-3 py-2 text-base font-medium transition-colors w-full text-left"

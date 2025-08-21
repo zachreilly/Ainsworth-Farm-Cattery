@@ -11,10 +11,13 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-cream-100">
+    <section id="pricing" className="py-24 bg-gradient-to-br from-cream-50 to-sage-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4">
+          <div className="inline-block bg-sage-100 px-4 py-2 rounded-full mb-6">
+            <span className="text-sage-700 text-sm font-semibold tracking-wide uppercase">Pricing</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
             Simple, Fair Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
