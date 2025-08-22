@@ -119,7 +119,11 @@ export default function GallerySection() {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className={`w-full h-64 transition-transform duration-500 group-hover:scale-110 ${
+                        index === facilityImages.length - 1 
+                          ? 'object-contain object-center bg-white' 
+                          : 'object-cover'
+                      }`}
                     />
                     <div className="absolute inset-0 bg-sage-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
