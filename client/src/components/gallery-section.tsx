@@ -130,9 +130,6 @@ export default function GallerySection() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-4 text-center">
-                    <p className="text-gray-700 font-medium">{image.alt}</p>
-                  </div>
                 </div>
               </div>
             ))}
