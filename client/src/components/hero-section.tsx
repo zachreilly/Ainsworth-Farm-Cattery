@@ -28,7 +28,7 @@ export default function HeroSection() {
           <span className="text-sage-200 bg-gradient-to-r from-sage-200 to-cream-200 bg-clip-text text-transparent">For Your Beloved Cat</span>
         </h1>
         <p className="text-lg md:text-xl mb-12 font-light max-w-3xl mx-auto leading-relaxed text-cream-100">
-          Nestled in the tranquil gardens of Ainsworth Farm in Kings Langley, 
+          Nestled in the tranquil gardens of Ainsworth Farm in Bucks Hill, 
           we provide a peaceful sanctuary where your cat's comfort, safety, and wellbeing are our highest priority.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">

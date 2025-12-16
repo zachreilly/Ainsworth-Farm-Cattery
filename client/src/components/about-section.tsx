@@ -11,7 +11,7 @@ export default function AboutSection() {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Set in the tranquil gardens of Ainsworth Farm in Kings Langley, your cat's stay with us is our priority 
+              Set in the tranquil gardens of Ainsworth Farm in Bucks Hill, your cat's stay with us is our priority 
               and we pride ourselves in caring for your cat as if it were our own.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">

@@ -16,7 +16,7 @@ export default function Footer() {
             <h3 className="text-2xl font-serif font-bold mb-6 text-sage-200">Ainsworth Farm Cattery</h3>
             <p className="text-gray-300 leading-relaxed mb-8 text-lg">
               A family-run cattery providing exceptional care for your beloved cats in the tranquil 
-              gardens of Ainsworth Farm in Kings Langley.
+              gardens of Ainsworth Farm in Bucks Hill.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-gray-400 hover:text-sage-300 transition-all duration-300 transform hover:scale-110">
@@ -99,6 +99,11 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="bg-gray-800/50 rounded-xl p-6 mt-8 text-center">
+          <p className="text-sage-200 font-semibold mb-2" data-testid="text-license-title">Licensed with Three Rivers District Council</p>
+          <p className="text-gray-300" data-testid="text-license-rating">3 Star Rating</p>
+          <p className="text-gray-400 text-sm mt-1" data-testid="text-license-number">Licence Number: TRDC/AAL/49700</p>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Ainsworth Farm Cattery. All rights reserved.</p>
