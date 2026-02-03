@@ -32,9 +32,15 @@ export default function PricingSection() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-sage-100 rounded-full mb-6">
                 <Heart className="text-sage-600 h-10 w-10" />
               </div>
-              <div className="mb-6">
-                <div className="text-6xl font-bold text-sage-700 mb-2">£15</div>
-                <div className="text-xl text-gray-600 font-medium">per day</div>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-6">
+                <div className="bg-sage-50 px-8 py-6 rounded-xl">
+                  <div className="text-5xl font-bold text-sage-700 mb-2">£20</div>
+                  <div className="text-lg text-gray-600 font-medium">per day for 1 cat</div>
+                </div>
+                <div className="bg-sage-50 px-8 py-6 rounded-xl">
+                  <div className="text-5xl font-bold text-sage-700 mb-2">£35</div>
+                  <div className="text-lg text-gray-600 font-medium">per day for 2 cats sharing</div>
+                </div>
               </div>
               <p className="text-gray-700 text-lg mb-8 leading-relaxed">
                 All-inclusive daily rate covering accommodation, meals, care, 
