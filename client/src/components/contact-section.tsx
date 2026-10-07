@@ -29,7 +29,7 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactInquiry) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+      const response = await apiRequest("POST", "/contact.php", data);
       return response.json();
     },
     onSuccess: () => {

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LoginModal from "./login-modal";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,7 +61,6 @@ export default function Navigation() {
               >
                 Contact
               </button>
-              <LoginModal />
             </div>
           </div>
           
