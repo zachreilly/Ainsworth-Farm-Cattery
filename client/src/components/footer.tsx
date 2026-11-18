@@ -103,7 +103,7 @@ export default function Footer() {
         <div className="bg-gray-800/50 rounded-xl p-6 mt-8 text-center">
           <p className="text-sage-200 font-semibold mb-2" data-testid="text-license-title">Licensed with Three Rivers District Council</p>
           <p className="text-gray-300" data-testid="text-license-rating">3 Star Rating</p>
-          <p className="text-gray-400 text-sm mt-1" data-testid="text-license-number">Licence Number: TRDC/AAL/49700</p>
+          <p className="text-gray-400 text-sm mt-1" data-testid="text-license-number">Licence Number: TRDC/AAL/2604</p>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Ainsworth Farm Cattery. All rights reserved.</p>

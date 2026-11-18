@@ -53,7 +53,7 @@ export default function PricingSection() {
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div className="flex items-start gap-3">
                   <Check className="text-sage-600 h-5 w-5 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Comfortable, spacious accommodation</span>
+                  <span className="text-gray-700">Spacious, fully heated and air-conditioned accommodation</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="text-sage-600 h-5 w-5 mt-1 flex-shrink-0" />

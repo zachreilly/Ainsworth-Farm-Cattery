@@ -41,7 +41,7 @@ export default function AboutSection() {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Home-Like Environment</h3>
               <p className="text-gray-600 leading-relaxed">
-                Comfortable accommodations designed to feel like a second home for your feline friend.
+                Comfortable, fully heated and air-conditioned accommodation designed to feel like a second home for your feline friend, whatever the weather.
               </p>
             </div>
             <div className="bg-white p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center group">
